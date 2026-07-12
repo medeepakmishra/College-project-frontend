@@ -25,7 +25,8 @@ export default function AICareerCenter() {
   const fetchAnalysis = async () => {
     try {
       const res = await analyzeResume();
-      setAnalysis(res.data.analysis);
+     console.log(res.data);
+setAnalysis(res.data.analysis);
     } catch (err) {
       console.log(err);
     } finally {

@@ -597,6 +597,7 @@
 
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import ResumeUpload from "../../components/student/ResumeUpload";
 
 import {
   createProfile,
@@ -746,15 +747,15 @@ export default function Profile() {
             profile.portfolio || "",
 
 
-          resume: {
+          // resume: {
 
-            url:
-              profile.resume?.url || "",
+          //   url:
+          //     profile.resume?.url || "",
 
-            publicId:
-              profile.resume?.publicId || "",
+          //   publicId:
+          //     profile.resume?.publicId || "",
 
-          },
+          // },
 
         });
 
@@ -1492,7 +1493,7 @@ export default function Profile() {
 
             {/* RESUME */}
 
-            <div>
+            {/* <div>
 
               <label className="
                 text-sm
@@ -1527,7 +1528,7 @@ export default function Profile() {
                 "
               />
 
-            </div>
+            </div> */}
 
 
           </div>
@@ -1536,9 +1537,17 @@ export default function Profile() {
 
 
 
+        
+        
+
+
+
         {/* =================================
             SKILLS
         ================================= */}
+
+
+
 
         <Section
           title="Skills"
@@ -1937,7 +1946,28 @@ export default function Profile() {
         </button>
 
 
+
       </form>
+
+
+<section
+className="
+bg-[#171717]
+p-6
+rounded-2xl
+border
+border-zinc-800
+
+"
+>
+
+<h2 className="text-xl font-bold mb-5 ">
+ Resume
+</h2>
+
+<ResumeUpload />
+
+</section>
 
     </div>
 

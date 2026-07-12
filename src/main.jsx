@@ -8,7 +8,7 @@ import AppRoutes from "./routes/AppRoutes";
 import AuthProvider from "./context/AuthContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <AuthProvider>
       <AppRoutes />
 
@@ -19,5 +19,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         }}
       />
     </AuthProvider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
