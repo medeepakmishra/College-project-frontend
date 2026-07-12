@@ -30,6 +30,7 @@ export default function Applications() {
 
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
+  const [previewApplication, setPreviewApplication] = useState(null);
 
   const [selectedApplication, setSelectedApplication] = useState(null);
 
@@ -53,7 +54,10 @@ export default function Applications() {
       setError("");
 
       const response = await getAllApplications();
-
+console.log(
+ "APPLICATION DATA:",
+ response.data.applications
+);
       setApplications(response.data.applications || []);
     } catch (err) {
       setError(err.response?.data?.message || "Failed to fetch applications");
@@ -355,12 +359,48 @@ export default function Applications() {
 
                   {/* ACTION */}
 
-                  <button
-                    onClick={() => openUpdateModal(application)}
-                    className="bg-blue-600 hover:bg-blue-700 px-5 py-2.5 rounded-xl transition cursor-pointer"
-                  >
-                    Manage
-                  </button>
+                 
+
+                  <div className="flex gap-3">
+
+<button
+onClick={() => {
+  console.log("RESUME DATA", application.student);
+  setPreviewApplication(application);
+}}
+className="
+border
+border-gray-700
+hover:border-green-500
+hover:text-green-400
+px-5
+py-2.5
+rounded-xl
+transition
+cursor-pointer
+"
+>
+  
+📄 Resume
+</button>
+
+
+<button
+onClick={() => openUpdateModal(application)}
+className="
+bg-blue-600
+hover:bg-blue-700
+px-5
+py-2.5
+rounded-xl
+transition
+cursor-pointer
+"
+>
+Manage
+</button>
+
+</div>
                 </div>
 
                 {/* INTERVIEW DETAILS */}

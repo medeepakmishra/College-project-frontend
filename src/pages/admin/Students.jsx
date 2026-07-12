@@ -588,6 +588,44 @@ export default function Students() {
                             />
 
                           </td>
+                          {/* RESUME */}
+
+<td className="px-6 py-5">
+
+{
+student.resume?.url ? (
+
+<a
+href={student.resume.url}
+target="_blank"
+rel="noreferrer"
+className="
+inline-flex
+items-center
+gap-2
+text-blue-400
+hover:text-blue-300
+text-sm
+"
+>
+
+<FileText size={16}/>
+
+View PDF
+
+</a>
+
+)
+:
+(
+<span className="text-gray-600 text-sm">
+No Resume
+</span>
+)
+
+}
+
+</td>
 
 
                           {/* ACTIONS */}
