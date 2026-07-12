@@ -3,15 +3,55 @@ import {
   useNavigate,
 } from "react-router-dom";
 
+// import {
+//   LayoutDashboard,
+//   BriefcaseBusiness,
+//   FileText,
+//   UserRound,
+//   Megaphone,
+//   LogOut,
+//   X,
+// } from "lucide-react";
 import {
   LayoutDashboard,
   BriefcaseBusiness,
   FileText,
   UserRound,
   Megaphone,
+  Brain,
   LogOut,
   X,
 } from "lucide-react";
+
+
+// const menuItems = [
+
+//   {
+//     name: "Dashboard",
+//     path: "/student/dashboard",
+//     icon: LayoutDashboard,
+//   },
+//   {
+//     name: "Eligible Drives",
+//     path: "/student/eligible-drives",
+//     icon: BriefcaseBusiness,
+//   },
+//   {
+//     name: "My Applications",
+//     path: "/student/applications",
+//     icon: FileText,
+//   },
+//   {
+//     name: "My Profile",
+//     path: "/student/profile",
+//     icon: UserRound,
+//   },
+//   {
+//     name: "Announcements",
+//     path: "/student/announcements",
+//     icon: Megaphone,
+//   },
+// ];
 
 
 const menuItems = [
@@ -39,6 +79,11 @@ const menuItems = [
     name: "Announcements",
     path: "/student/announcements",
     icon: Megaphone,
+  },
+  {
+    name: "AI Career Center",
+    path: "/student/ai",
+    icon: Brain,
   },
 ];
 
