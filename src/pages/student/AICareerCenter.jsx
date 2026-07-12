@@ -267,7 +267,7 @@ return (
 
     <div className="xl:col-span-1">
 
-      <div className="sticky top-24 h-[calc(100vh-120px)]">
+      <div className="h-[85vh] sticky top-24">
 
         <AIAssistant />
 
