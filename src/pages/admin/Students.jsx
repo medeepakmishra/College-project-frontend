@@ -594,27 +594,14 @@ export default function Students() {
 
 {
 student.resume?.url ? (
-
 <a
-href={student.resume.url}
+href={`https://docs.google.com/gview?embedded=true&url=${encodeURIComponent(student.resume.url)}`}
 target="_blank"
 rel="noreferrer"
-className="
-inline-flex
-items-center
-gap-2
-text-blue-400
-hover:text-blue-300
-text-sm
-"
+className="text-blue-400"
 >
-
-<FileText size={16}/>
-
-View PDF
-
+📄 View Resume
 </a>
-
 )
 :
 (
